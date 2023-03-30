@@ -9,15 +9,17 @@ body {
     width: 100vw;
     height: 100vh;
     /*  */
-    background-color: #1b1b1b;
+    background-color: #fff8ed;
 }
 li{
     list-style: none;
+    
 }
 a{
     text-decoration: none;
-    color: aliceblue;
+    color: rgb(0, 0, 0);
     font-size: 1rem;
+     transition: scale 0.4s ease-in-out;
 }
 a:hover{
     color: orange;
@@ -25,6 +27,7 @@ a:hover{
 header{
     position: relative;
     padding: 0 2rem;
+    background-color: #fff8ed;
 }
 .navbar{
     width: 100%;
@@ -47,7 +50,7 @@ header{
 
 }
 .toggle_btn{
-    color: aliceblue;
+    color: rgb(0, 0, 0);
     cursor: pointer;
    display: none;
 }
@@ -69,7 +72,7 @@ header{
 }
 .dropdown_menu{
     position: absolute;
-    top: 60px;
+    top: 70px;
     right: 2rem;
     width: 300px;
     height: 0;
@@ -78,6 +81,7 @@ header{
     border-radius: 10px;
    overflow: hidden;
    display: none;
+
    transition: height 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .dropdown_menu.open{
@@ -92,6 +96,20 @@ header{
 .dropdown_menu .action_btn{
     width: 100%;
     text-align: center;
+}
+img{
+    animation: ishake 1.5s alternate-reverse infinite;
+    z-index: 3;
+}
+@keyframes ishake {
+    from{
+        transform: rotate(-5deg);
+    }
+    to{
+        transform: rotate(5deg);
+    }
+   
+    
 }
 
 @media (max-width:800px) {
